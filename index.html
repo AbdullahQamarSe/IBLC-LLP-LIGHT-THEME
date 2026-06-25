@@ -146,7 +146,7 @@
             backdrop-filter: blur(18px);
             -webkit-backdrop-filter: blur(18px);
             border-bottom: 2px solid var(--soft-gold);
-            padding: 0 2rem;
+            padding: 0 1.5rem;
             transition: all var(--transition-smooth);
             box-shadow: var(--shadow-soft);
         }
@@ -160,7 +160,7 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
-            height: 68px;
+            height: 72px;
         }
         .nav-brand {
             display: flex;
@@ -169,19 +169,23 @@
             text-decoration: none;
             color: var(--primary-navy);
             font-weight: 700;
-            font-size: 1.15rem;
+            font-size: 0.9rem;
             letter-spacing: 0.5px;
-        }
-        .nav-brand .brand-icon {
-            font-size: 1.6rem;
-            color: var(--accent-gold);
+            line-height: 1.2;
         }
         .nav-brand span {
-            line-height: 1.2;
+            font-size: clamp(0.75rem, 2vw, 0.95rem);
+            white-space: normal;
+            max-width: 250px;
+        }
+        .nav-brand .brand-icon {
+            font-size: 1.8rem;
+            color: var(--accent-gold);
+            flex-shrink: 0;
         }
         .nav-brand small {
             display: block;
-            font-size: 0.65rem;
+            font-size: 0.6rem;
             color: var(--muted-text);
             font-weight: 400;
             letter-spacing: 0;
@@ -189,18 +193,20 @@
         .nav-links {
             display: flex;
             list-style: none;
-            gap: 2rem;
+            gap: 1.2rem;
             align-items: center;
+            flex-wrap: wrap;
         }
         .nav-links a {
             text-decoration: none;
             color: var(--primary-navy);
-            font-size: 0.95rem;
+            font-size: 0.85rem;
             position: relative;
             padding: 6px 2px;
             transition: color var(--transition-fast);
             font-weight: 500;
             letter-spacing: 0.3px;
+            white-space: nowrap;
         }
         .nav-links a::after {
             content: '';
@@ -222,13 +228,14 @@
         .nav-cta {
             background: var(--accent-gold);
             color: #fff !important;
-            padding: 10px 20px !important;
+            padding: 8px 16px !important;
             border-radius: 25px;
             font-weight: 600 !important;
             letter-spacing: 0.5px;
             box-shadow: 0 0 20px rgba(200, 164, 78, 0.35);
             animation: glowPulse 2.5s ease-in-out infinite;
             transition: all var(--transition-smooth) !important;
+            white-space: nowrap;
         }
         .nav-cta:hover {
             background: #b8933e;
@@ -256,28 +263,29 @@
             color: var(--primary-navy);
             font-size: 1.5rem;
             aria-label: 'Toggle mobile menu';
+            margin-left: auto;
+            z-index: 10;
         }
 
         @media (max-width: 1024px) {
             .nav-links {
-                gap: 1.2rem;
+                gap: 0.8rem;
             }
             .nav-links a {
-                font-size: 0.85rem;
+                font-size: 0.8rem;
             }
             .nav-cta {
-                padding: 8px 15px !important;
-                font-size: 0.82rem !important;
+                padding: 6px 12px !important;
+                font-size: 0.75rem !important;
             }
         }
-        @media (max-width: 768px) {
+        @media (max-width: 900px) {
             .mobile-toggle {
                 display: block;
-                z-index: 10;
             }
             .nav-links {
                 position: fixed;
-                top: 68px;
+                top: 72px;
                 left: 0;
                 right: 0;
                 background: rgba(255, 255, 255, 0.97);
@@ -290,6 +298,7 @@
                 transform: translateY(-120%);
                 transition: transform var(--transition-smooth);
                 z-index: 9980;
+                flex-wrap: nowrap;
             }
             .nav-links.open {
                 transform: translateY(0);
@@ -763,7 +772,6 @@
         }
         .premium-card .card-label {
             font-size: 0.7rem;
-            text-transform: uppercase;
             letter-spacing: 2px;
             color: var(--accent-gold);
             font-weight: 700;
@@ -1231,16 +1239,16 @@
     <div id="page-loader" aria-hidden="true">
         <div class="loader-inner">
             <span class="loader-shield">&#9878;</span>
-            <p class="loader-text">IBLC LLP</p>
+            <p class="loader-text">INTERNATIONAL BUSINESS LAW CONSULTANTS LLP</p>
         </div>
     </div>
 
     <!-- Navbar -->
     <header class="navbar" id="navbar" role="banner">
         <div class="nav-container">
-            <a href="index.html" class="nav-brand" aria-label="IBLC LLP Home">
+            <a href="index.html" class="nav-brand" aria-label="International Business Law Consultants LLP Home">
                 <span class="brand-icon">&#9878;</span>
-                <span>IBLC LLP<small>SECP Registered</small></span>
+                <span>INTERNATIONAL BUSINESS LAW CONSULTANTS LLP<small>SECP Registered</small></span>
             </a>
             <button class="mobile-toggle" id="mobile-toggle" aria-label="Open mobile menu" aria-expanded="false">
                 <i class="fa-solid fa-bars"></i>
@@ -1250,6 +1258,7 @@
                     <li role="none"><a href="index.html" role="menuitem" class="active">Home</a></li>
                     <li role="none"><a href="#departments" role="menuitem">Departments</a></li>
                     <li role="none"><a href="#about" role="menuitem">About</a></li>
+                    <li role="none"><a href="#team" role="menuitem">Team</a></li>
                     <li role="none"><a href="#blogs" role="menuitem">Blogs</a></li>
                     <li role="none"><a href="contactus.html" role="menuitem">Contact</a></li>
                     <li role="none"><a href="contactus.html" class="nav-cta magnetic-btn" role="menuitem">Book Strategy Session</a></li>
@@ -1281,7 +1290,7 @@
                         <span class="jur-marker">&#127482;&#127480; USA</span>
                         <span class="jur-marker">&#127468;&#127463; UK</span>
                         <span class="jur-marker">&#127466;&#127466; UAE</span>
-                        <span class="jur-marker">&#127480;&#127468; Singapore</span>
+                        <span class="jur-marker">Multiple Jurisdictions</span>
                     </div>
                 </div>
                 <div class="hero-visual">
@@ -1321,9 +1330,9 @@
                             <div class="card-badge"><i class="fa-solid fa-building"></i></div>
                         </div>
                         <div class="card-body">
-                            <div class="card-label">CERTIFY</div>
+                            <div class="card-label">Certify</div>
                             <h3 class="card-title">Setup and Registrations</h3>
-                            <p class="card-desc">Registering LLCs, LTDs, and international corporate entities in the US, UK, UAE, and Singapore seamlessly.</p>
+                            <p class="card-desc">Registering LLCs, LTDs, and international corporate entities in the US, UK, UAE, and Multiple Jurisdictions seamlessly.</p>
                             <a href="#dept-certify" class="card-link">Learn more <i class="fa-solid fa-arrow-right"></i></a>
                         </div>
                     </div>
@@ -1339,7 +1348,7 @@
                             <div class="card-badge"><i class="fa-solid fa-pen-to-square"></i></div>
                         </div>
                         <div class="card-body">
-                            <div class="card-label">DRAFTIT</div>
+                            <div class="card-label">Draft<i>it</i> </div>
                             <h3 class="card-title">Contracts and Transactions</h3>
                             <p class="card-desc">Professional drafting of cross border trade agreements, e commerce terms, and data privacy frameworks.</p>
                             <a href="#dept-draftit" class="card-link">Learn more <i class="fa-solid fa-arrow-right"></i></a>
@@ -1357,7 +1366,7 @@
                             <div class="card-badge"><i class="fa-solid fa-calculator"></i></div>
                         </div>
                         <div class="card-body">
-                            <div class="card-label">iTAXO</div>
+                            <div class="card-label">iTaxo</div>
                             <h3 class="card-title">Global Taxation</h3>
                             <p class="card-desc">Strategic international tax planning, transfer pricing audits, and global sanctions compliance.</p>
                             <a href="#dept-itaxo" class="card-link">Learn more <i class="fa-solid fa-arrow-right"></i></a>
@@ -1375,7 +1384,7 @@
                             <div class="card-badge"><i class="fa-solid fa-gavel"></i></div>
                         </div>
                         <div class="card-body">
-                            <div class="card-label">JURIST PANEL</div>
+                            <div class="card-label">Jurist Panel</div>
                             <h3 class="card-title">Litigation and Compliance</h3>
                             <p class="card-desc">White collar crime defense, financial audits, and international commercial arbitration.</p>
                             <a href="#dept-jurist" class="card-link">Learn more <i class="fa-solid fa-arrow-right"></i></a>
@@ -1457,7 +1466,7 @@
                         <div class="dept-label">CERTIFY</div>
                         <h3>Establishing Your Entity Safely in Global Markets</h3>
                         <ul class="dept-services">
-                            <li><span class="svc-dot">&#9679;</span><div><strong>Outbound Corporate Structuring</strong>We guide Pakistani and international businesses through setting up subsidiaries and holding companies in the US, UK, UAE, and Singapore.</div></li>
+                            <li><span class="svc-dot">&#9679;</span><div><strong>Outbound Corporate Structuring</strong>We guide Pakistani and international businesses through setting up subsidiaries and holding companies in the US, UK, UAE, and Multiple Jurisdictions.</div></li>
                             <li><span class="svc-dot">&#9679;</span><div><strong>SBP Regulatory Pathways</strong>We help clients understand and manage State Bank of Pakistan processes for outward foreign direct investments and remitting capital abroad.</div></li>
                             <li><span class="svc-dot">&#9679;</span><div><strong>Global Intellectual Property Rights</strong>We protect your brand identity by managing international trademark registrations through the Madrid System, alongside support for patents and copyrights.</div></li>
                             <li><span class="svc-dot">&#9679;</span><div><strong>Corporate Immigration Support</strong>We manage corporate mobility by preparing business visa, executive relocation, and intra company transfer documentation.</div></li>
@@ -1607,6 +1616,80 @@
             </div>
         </section>
 
+        <!-- NEW Section: Team -->
+        <section class="section bg-soft-silver" id="team">
+            <div class="section-container">
+                <div class="section-header reveal">
+                    <span class="section-label">Leadership & Advisors</span>
+                    <h2 class="section-title">Meet Our Team</h2>
+                    <p class="section-subtitle">Guided by a distinguished founder and a dedicated panel of corporate law consultants.</p>
+                </div>
+                <!-- Founder Highlight -->
+                <div class="dept-block reveal" style="margin-bottom:3rem;">
+                    <div class="dept-img-wrap">
+                        <img src="Sir_Shah_Zaman.jpeg"
+                        alt="Shah Zaman S. Shami – Founder & Managing Partner of International Business Law Consultants LLP"
+                        width="500" height="500" loading="lazy"
+                        onerror="this.style.background='linear-gradient(135deg,#d4cfc4,#e8e4d8)'; this.style.minHeight='300px';">
+                    </div>
+                    <div class="dept-content">
+                        <div class="dept-icon"><i class="fa-solid fa-user-tie"></i></div>
+                        <div class="dept-label">Founder & Managing Partner</div>
+                        <h3>Shah Zaman S. Shami</h3>
+                        <p style="color:var(--charcoal);line-height:1.7;font-size:0.95rem;">Shah Zaman S. Shami is a distinguished legal professional who brings a rare combination of elite academic distinction and high-stakes corporate experience to International Business Law Consultants LLP. A Lahore Board Topper and recipient of Academic Distinction from Government College University (GCU), Lahore, he earned his LLB from Punjab University Law College before securing a Post Graduate Diploma in Environmental Law. He advanced his global legal expertise with an LLM in International Business Law from the University of Bedfordshire, where his core research specialized in the modern domain of International Digital Trade Law.</p>
+                        <p style="color:var(--charcoal);line-height:1.7;font-size:0.95rem;">As the founder and leader of the firm, Shah Zaman advises multinational corporations, local enterprises, and high-profile entities across complex cross-border and domestic legal frameworks. His sophisticated corporate practice spans International Corporate Governance, International Commercial Litigation, International Commercial Arbitration, International Intellectual Property Law, and International Trade & Digital Trade Law.</p>
+                        <p style="color:var(--charcoal);line-height:1.7;font-size:0.95rem;">Beyond his foundational corporate work, Shah Zaman has a robust history of public interest litigation and institutional service. He has contributed significantly to environmental jurisprudence and notably litigated the high-profile Punjab University tree-cutting case. He also served as Secretary General of the International Law Foundation, spearheading major legal research and reform initiatives. Currently, Shah Zaman serves as Legal Advisor to Kohala SMC Pvt. Ltd, Horeca Systems, and Kohala Systems, overseeing complex international organizational matters and ensuring strict statutory compliance with Labour Department, EOBI, PESSI, LDA, and related regulatory authorities. He has successfully represented major market leaders such as Jazz, ICON Builders, and other renowned companies. Committed to legal education, he is a Visiting Faculty member at the International School of Law and Business.</p>
+                    </div>
+                </div>
+
+                <!-- Additional Team Members Grid -->
+                <div class="cards-grid-3">
+                    <div class="premium-card reveal">
+                        <div class="shine-overlay"></div>
+                        <div class="card-img-wrap">
+                            <img src="https://randomuser.me/api/portraits/women/44.jpg"
+                            alt="Ayesha Khalid – Senior Corporate Consultant"
+                            width="300" height="200" loading="lazy"
+                            onerror="this.style.background='linear-gradient(135deg,#d5d0c5,#e9e5da)'; this.style.minHeight='200px';">
+                        </div>
+                        <div class="card-body">
+                            <div class="card-label">Senior Consultant</div>
+                            <h3 class="card-title">Ayesha Khalid</h3>
+                            <p class="card-desc">An LLM graduate in International Business Law with extensive experience in cross‑border entity formation and corporate governance for digital enterprises.</p>
+                        </div>
+                    </div>
+                    <div class="premium-card reveal">
+                        <div class="shine-overlay"></div>
+                        <div class="card-img-wrap">
+                            <img src="https://randomuser.me/api/portraits/men/75.jpg"
+                            alt="Bilal Siddiqui – International Tax Consultant"
+                            width="300" height="200" loading="lazy"
+                            onerror="this.style.background='linear-gradient(135deg,#d5d0c5,#e9e5da)'; this.style.minHeight='200px';">
+                        </div>
+                        <div class="card-body">
+                            <div class="card-label">Tax Consultant</div>
+                            <h3 class="card-title">Bilal Siddiqui</h3>
+                            <p class="card-desc">Specialist in international tax planning, transfer pricing, and compliance with double taxation treaties for technology exporters.</p>
+                        </div>
+                    </div>
+                    <div class="premium-card reveal">
+                        <div class="shine-overlay"></div>
+                        <div class="card-img-wrap">
+                            <img src="https://randomuser.me/api/portraits/women/68.jpg"
+                            alt="Fatima Rizvi – Compliance & Disputes Advisor"
+                            width="300" height="200" loading="lazy"
+                            onerror="this.style.background='linear-gradient(135deg,#d5d0c5,#e9e5da)'; this.style.minHeight='200px';">
+                        </div>
+                        <div class="card-body">
+                            <div class="card-label">Compliance Advisor</div>
+                            <h3 class="card-title">Fatima Rizvi</h3>
+                            <p class="card-desc">Advises on AML audits, sanctions screening, and international arbitration, ensuring clients meet global regulatory standards.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- Section 7: Timeline -->
         <section class="section" id="timeline-section">
             <div class="section-container">
@@ -1653,73 +1736,43 @@
                 </div>
                 <div class="cards-grid-4" id="industries-grid">
                     <div class="industry-card reveal">
-                        <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1600&q=80"
-                        alt="Digital exporters"
-                        width="300" height="180" loading="lazy"
-                        onerror="this.style.background='linear-gradient(135deg,#c8c4b8,#dcd8cc)';">
+                        <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1600&q=80" alt="Digital exporters" width="300" height="180" loading="lazy" onerror="this.style.background='linear-gradient(135deg,#c8c4b8,#dcd8cc)';">
                         <div class="industry-overlay"><span class="industry-name">Digital Exporters</span><span class="industry-desc">Global digital product companies</span></div>
                     </div>
                     <div class="industry-card reveal">
-                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1600&q=80"
-                        alt="E commerce sellers"
-                        width="300" height="180" loading="lazy"
-                        onerror="this.style.background='linear-gradient(135deg,#c8c4b8,#dcd8cc)';">
+                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1600&q=80" alt="E commerce sellers" width="300" height="180" loading="lazy" onerror="this.style.background='linear-gradient(135deg,#c8c4b8,#dcd8cc)';">
                         <div class="industry-overlay"><span class="industry-name">E Commerce Sellers</span><span class="industry-desc">Online marketplace businesses</span></div>
                     </div>
                     <div class="industry-card reveal">
-                        <img src="https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?auto=format&fit=crop&w=1600&q=80"
-                        alt="SaaS founders"
-                        width="300" height="180" loading="lazy"
-                        onerror="this.style.background='linear-gradient(135deg,#c8c4b8,#dcd8cc)';">
+                        <img src="https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?auto=format&fit=crop&w=1600&q=80" alt="SaaS founders" width="300" height="180" loading="lazy" onerror="this.style.background='linear-gradient(135deg,#c8c4b8,#dcd8cc)';">
                         <div class="industry-overlay"><span class="industry-name">SaaS Founders</span><span class="industry-desc">Software as a Service startups</span></div>
                     </div>
                     <div class="industry-card reveal">
-                        <img src="https://images.unsplash.com/photo-1559136555-9303baea8ebd?auto=format&fit=crop&w=1600&q=80"
-                        alt="IT companies"
-                        width="300" height="180" loading="lazy"
-                        onerror="this.style.background='linear-gradient(135deg,#c8c4b8,#dcd8cc)';">
+                        <img src="https://images.unsplash.com/photo-1559136555-9303baea8ebd?auto=format&fit=crop&w=1600&q=80" alt="IT companies" width="300" height="180" loading="lazy" onerror="this.style.background='linear-gradient(135deg,#c8c4b8,#dcd8cc)';">
                         <div class="industry-overlay"><span class="industry-name">IT Companies</span><span class="industry-desc">Technology and outsourcing firms</span></div>
                     </div>
                     <div class="industry-card reveal">
-                        <img src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=1600&q=80"
-                        alt="Manufacturing exporters"
-                        width="300" height="180" loading="lazy"
-                        onerror="this.style.background='linear-gradient(135deg,#c8c4b8,#dcd8cc)';">
+                        <img src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=1600&q=80" alt="Manufacturing exporters" width="300" height="180" loading="lazy" onerror="this.style.background='linear-gradient(135deg,#c8c4b8,#dcd8cc)';">
                         <div class="industry-overlay"><span class="industry-name">Manufacturing Exporters</span><span class="industry-desc">Industrial goods producers</span></div>
                     </div>
                     <div class="industry-card reveal">
-                        <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1600&q=80"
-                        alt="Real estate groups"
-                        width="300" height="180" loading="lazy"
-                        onerror="this.style.background='linear-gradient(135deg,#c8c4b8,#dcd8cc)';">
+                        <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1600&q=80" alt="Real estate groups" width="300" height="180" loading="lazy" onerror="this.style.background='linear-gradient(135deg,#c8c4b8,#dcd8cc)';">
                         <div class="industry-overlay"><span class="industry-name">Real Estate Groups</span><span class="industry-desc">Property investment firms</span></div>
                     </div>
                     <div class="industry-card reveal">
-                        <img src="https://images.unsplash.com/photo-1556761175-4b46a572b786?auto=format&fit=crop&w=1600&q=80"
-                        alt="Trading companies"
-                        width="300" height="180" loading="lazy"
-                        onerror="this.style.background='linear-gradient(135deg,#c8c4b8,#dcd8cc)';">
+                        <img src="https://images.unsplash.com/photo-1556761175-4b46a572b786?auto=format&fit=crop&w=1600&q=80" alt="Trading companies" width="300" height="180" loading="lazy" onerror="this.style.background='linear-gradient(135deg,#c8c4b8,#dcd8cc)';">
                         <div class="industry-overlay"><span class="industry-name">Trading Companies</span><span class="industry-desc">Import and export businesses</span></div>
                     </div>
                     <div class="industry-card reveal">
-                        <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=1600&q=80"
-                        alt="Corporate enterprises"
-                        width="300" height="180" loading="lazy"
-                        onerror="this.style.background='linear-gradient(135deg,#c8c4b8,#dcd8cc)';">
+                        <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=1600&q=80" alt="Corporate enterprises" width="300" height="180" loading="lazy" onerror="this.style.background='linear-gradient(135deg,#c8c4b8,#dcd8cc)';">
                         <div class="industry-overlay"><span class="industry-name">Corporate Enterprises</span><span class="industry-desc">Large multinational groups</span></div>
                     </div>
                     <div class="industry-card reveal">
-                        <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=1600&q=80"
-                        alt="Freelance agencies"
-                        width="300" height="180" loading="lazy"
-                        onerror="this.style.background='linear-gradient(135deg,#c8c4b8,#dcd8cc)';">
+                        <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=1600&q=80" alt="Freelance agencies" width="300" height="180" loading="lazy" onerror="this.style.background='linear-gradient(135deg,#c8c4b8,#dcd8cc)';">
                         <div class="industry-overlay"><span class="industry-name">Freelance Agencies</span><span class="industry-desc">Creative and digital agencies</span></div>
                     </div>
                     <div class="industry-card reveal">
-                        <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1600&q=80"
-                        alt="Holding companies"
-                        width="300" height="180" loading="lazy"
-                        onerror="this.style.background='linear-gradient(135deg,#c8c4b8,#dcd8cc)';">
+                        <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1600&q=80" alt="Holding companies" width="300" height="180" loading="lazy" onerror="this.style.background='linear-gradient(135deg,#c8c4b8,#dcd8cc)';">
                         <div class="industry-overlay"><span class="industry-name">Holding Companies</span><span class="industry-desc">Multi entity corporate groups</span></div>
                     </div>
                 </div>
@@ -1763,31 +1816,19 @@
                 </div>
                 <div class="cards-grid-4">
                     <div class="gallery-card reveal">
-                        <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1600&q=80"
-                        alt="Global Business Expansion"
-                        width="300" height="260" loading="lazy"
-                        onerror="this.style.background='linear-gradient(135deg,#bfbbb0,#d5d1c6)';">
+                        <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1600&q=80" alt="Global Business Expansion" width="300" height="260" loading="lazy" onerror="this.style.background='linear-gradient(135deg,#bfbbb0,#d5d1c6)';">
                         <div class="gallery-overlay"><span class="gallery-title">Global Business Expansion</span><span class="gallery-arrow"><i class="fa-solid fa-arrow-right"></i></span></div>
                     </div>
                     <div class="gallery-card reveal">
-                        <img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=1600&q=80"
-                        alt="Contracts and Transactions"
-                        width="300" height="260" loading="lazy"
-                        onerror="this.style.background='linear-gradient(135deg,#bfbbb0,#d5d1c6)';">
+                        <img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=1600&q=80" alt="Contracts and Transactions" width="300" height="260" loading="lazy" onerror="this.style.background='linear-gradient(135deg,#bfbbb0,#d5d1c6)';">
                         <div class="gallery-overlay"><span class="gallery-title">Contracts and Transactions</span><span class="gallery-arrow"><i class="fa-solid fa-arrow-right"></i></span></div>
                     </div>
                     <div class="gallery-card reveal">
-                        <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=1600&q=80"
-                        alt="Taxation and Compliance"
-                        width="300" height="260" loading="lazy"
-                        onerror="this.style.background='linear-gradient(135deg,#bfbbb0,#d5d1c6)';">
+                        <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=1600&q=80" alt="Taxation and Compliance" width="300" height="260" loading="lazy" onerror="this.style.background='linear-gradient(135deg,#bfbbb0,#d5d1c6)';">
                         <div class="gallery-overlay"><span class="gallery-title">Taxation and Compliance</span><span class="gallery-arrow"><i class="fa-solid fa-arrow-right"></i></span></div>
                     </div>
                     <div class="gallery-card reveal">
-                        <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=1600&q=80"
-                        alt="Disputes and Advisory"
-                        width="300" height="260" loading="lazy"
-                        onerror="this.style.background='linear-gradient(135deg,#bfbbb0,#d5d1c6)';">
+                        <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=1600&q=80" alt="Disputes and Advisory" width="300" height="260" loading="lazy" onerror="this.style.background='linear-gradient(135deg,#bfbbb0,#d5d1c6)';">
                         <div class="gallery-overlay"><span class="gallery-title">Disputes and Advisory</span><span class="gallery-arrow"><i class="fa-solid fa-arrow-right"></i></span></div>
                     </div>
                 </div>
@@ -1805,10 +1846,7 @@
                     <div class="premium-card reveal">
                         <div class="shine-overlay"></div>
                         <div class="card-img-wrap">
-                            <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1600&q=80"
-                            alt="How Pakistani Startups Can Structure a US LLC"
-                            width="400" height="200" loading="lazy"
-                            onerror="this.style.background='linear-gradient(135deg,#d5d0c5,#e9e5da)'; this.style.minHeight='200px';">
+                            <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1600&q=80" alt="How Pakistani Startups Can Structure a US LLC" width="400" height="200" loading="lazy" onerror="this.style.background='linear-gradient(135deg,#d5d0c5,#e9e5da)'; this.style.minHeight='200px';">
                         </div>
                         <div class="card-body">
                             <div class="card-label">Blog &bull; 8 min read</div>
@@ -1820,10 +1858,7 @@
                     <div class="premium-card reveal">
                         <div class="shine-overlay"></div>
                         <div class="card-img-wrap">
-                            <img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=1600&q=80"
-                            alt="Why Cross Border Contracts Fail"
-                            width="400" height="200" loading="lazy"
-                            onerror="this.style.background='linear-gradient(135deg,#d5d0c5,#e9e5da)'; this.style.minHeight='200px';">
+                            <img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=1600&q=80" alt="Why Cross Border Contracts Fail" width="400" height="200" loading="lazy" onerror="this.style.background='linear-gradient(135deg,#d5d0c5,#e9e5da)'; this.style.minHeight='200px';">
                         </div>
                         <div class="card-body">
                             <div class="card-label">Blog &bull; 7 min read</div>
@@ -1835,10 +1870,7 @@
                     <div class="premium-card reveal">
                         <div class="shine-overlay"></div>
                         <div class="card-img-wrap">
-                            <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=1600&q=80"
-                            alt="International Tax Planning Basics"
-                            width="400" height="200" loading="lazy"
-                            onerror="this.style.background='linear-gradient(135deg,#d5d0c5,#e9e5da)'; this.style.minHeight='200px';">
+                            <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=1600&q=80" alt="International Tax Planning Basics" width="400" height="200" loading="lazy" onerror="this.style.background='linear-gradient(135deg,#d5d0c5,#e9e5da)'; this.style.minHeight='200px';">
                         </div>
                         <div class="card-body">
                             <div class="card-label">Blog &bull; 6 min read</div>
@@ -1884,7 +1916,6 @@
                     <li><span style="color:#b0b0b0;">United States</span></li>
                     <li><span style="color:#b0b0b0;">United Kingdom</span></li>
                     <li><span style="color:#b0b0b0;">United Arab Emirates</span></li>
-                    <li><span style="color:#b0b0b0;">Singapore</span></li>
                     <li><span style="color:#b0b0b0;">Multi Jurisdictional</span></li>
                 </ul>
             </div>
@@ -1933,7 +1964,6 @@
                         icon.className = isOpen ? 'fa-solid fa-xmark' : 'fa-solid fa-bars';
                     }
                 });
-                // Close on link click
                 navLinks.querySelectorAll('a').forEach(function(link) {
                     link.addEventListener('click', function() {
                         navLinks.classList.remove('open');
@@ -1954,7 +1984,7 @@
                 }
             });
 
-            // Smooth scroll for anchor links
+            // Smooth scroll
             document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
                 anchor.addEventListener('click', function(e) {
                     const targetId = this.getAttribute('href');
@@ -1968,8 +1998,7 @@
             });
 
             // Scroll reveal
-            const reveals = document.querySelectorAll(
-                '.reveal, .reveal-left, .reveal-right, .reveal-zoom');
+            const reveals = document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .reveal-zoom');
             const revealObserver = new IntersectionObserver(function(entries) {
                 entries.forEach(function(entry) {
                     if (entry.isIntersecting) {
@@ -2004,7 +2033,6 @@
                         const target = parseInt(counter.getAttribute('data-target'));
                         const duration = 1800;
                         const startTime = performance.now();
-
                         function updateCounter(timestamp) {
                             const elapsed = timestamp - startTime;
                             const progress = Math.min(elapsed / duration, 1);
@@ -2052,7 +2080,6 @@
                     heroParticles.appendChild(particle);
                 }
             }
-            // Global dots
             const heroDots = document.getElementById('hero-dots');
             if (heroDots) {
                 for (let i = 0; i < 20; i++) {
@@ -2066,22 +2093,20 @@
                 }
             }
 
-            // Magnetic button effect
-            const magneticBtns = document.querySelectorAll('.magnetic-btn');
-            magneticBtns.forEach(function(btn) {
+            // Magnetic button
+            document.querySelectorAll('.magnetic-btn').forEach(function(btn) {
                 btn.addEventListener('mousemove', function(e) {
                     const rect = btn.getBoundingClientRect();
                     const x = e.clientX - rect.left - rect.width / 2;
                     const y = e.clientY - rect.top - rect.height / 2;
-                    btn.style.transform = 'translate(' + (x * 0.2) + 'px, ' + (y * 0.2) +
-                        'px)';
+                    btn.style.transform = 'translate(' + (x * 0.2) + 'px, ' + (y * 0.2) + 'px)';
                 });
                 btn.addEventListener('mouseleave', function() {
                     btn.style.transform = 'translate(0, 0)';
                 });
             });
 
-            // Active nav highlight on scroll
+            // Active nav on scroll
             const sections = document.querySelectorAll('section[id]');
             const navItems = document.querySelectorAll('.nav-links a:not(.nav-cta)');
             window.addEventListener('scroll', function() {
@@ -2103,17 +2128,13 @@
             // Image fallback
             document.querySelectorAll('img').forEach(function(img) {
                 img.addEventListener('error', function() {
-                    this.style.background =
-                        'linear-gradient(135deg, #d4cfc4, #e8e4d8, #c8c0b0)';
+                    this.style.background = 'linear-gradient(135deg, #d4cfc4, #e8e4d8, #c8c0b0)';
                     this.style.minHeight = '200px';
-                    this.style.display = 'flex';
-                    this.style.alignItems = 'center';
-                    this.style.justifyContent = 'center';
                     this.alt = 'Image placeholder - ' + (this.alt || 'corporate advisory');
                 });
             });
 
-            console.log('IBLC LLP - Premium Corporate Website Loaded Successfully');
+            console.log('International Business Law Consultants LLP - Premium Corporate Website Loaded');
         })();
     </script>
 
@@ -2126,11 +2147,10 @@
             "url": "https://www.iblc-llp.com/",
             "description": "SECP registered corporate advisory firm providing legal solutions for cross border commerce, international taxation, corporate structuring, and enterprise protection.",
             "foundingDate": "2023",
-            "address": {
-                "@type": "PostalAddress",
-                "addressCountry": "PK"
-            },
-            "sameAs": []
+            "address": { "@type": "PostalAddress", "addressCountry": "PK" },
+            "employee": [
+                { "@type": "Person", "name": "Shah Zaman S. Shami", "jobTitle": "Founder & Managing Partner" }
+            ]
         }
     </script>
     <script type="application/ld+json">
@@ -2139,8 +2159,7 @@
             "@type": "LegalService",
             "name": "International Business Law Consultants LLP",
             "description": "Corporate advisory firm specializing in international business law, cross border transactions, and global tax planning.",
-            "url": "https://www.iblc-llp.com/",
-            "areaServed": ["US", "UK", "AE", "SG", "PK"]
+            "url": "https://www.iblc-llp.com/"
         }
     </script>
 </body>
