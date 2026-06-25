@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How Pakistani Startups Can Structure a US LLC for Global Sales | IBLC LLP Blog</title>
+    <meta name="description" content="A comprehensive guide for Pakistani founders on structuring a US LLC to access global markets, payment processors, and international customers.">
+    <link rel="canonical" href="https://www.iblc-llp.com/blog1.html">
+    <meta property="og:title" content="How Pakistani Startups Can Structure a US LLC for Global Sales">
+    <meta property="og:description" content="Learn the step-by-step process for Pakistani entrepreneurs to form a US LLC and unlock global sales opportunities.">
+    <meta property="og:type" content="article">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="US LLC Structure for Pakistani Startups | IBLC LLP">
+    <meta name="twitter:description" content="Guide to structuring a US LLC for global sales from Pakistan.">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        :root {
+            --primary-navy: #1a2744;
+            --secondary-blue: #2c4a7c;
+            --light-blue: #e8f0fb;
+            --accent-gold: #c8a44e;
+            --soft-gold: #d4b96a;
+            --pearl-white: #fafaf7;
+            --pure-white: #ffffff;
+            --silver: #e8e8e4;
+            --soft-silver: #f3f3f0;
+            --charcoal: #3a3a3a;
+            --muted-text: #6b6b6b;
+            --border-color: #e0ded8;
+            --shadow-soft: 0 2px 12px rgba(0, 0, 0, 0.06);
+            --shadow-medium: 0 8px 30px rgba(0, 0, 0, 0.09);
+            --shadow-premium: 0 20px 50px rgba(0, 0, 0, 0.12);
+            --radius-small: 8px;
+            --radius-medium: 14px;
+            --radius-large: 22px;
+            --container-width: 900px;
+            --transition-fast: 0.2s ease;
+            --transition-smooth: 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            --font-main: 'Times New Roman', Georgia, 'Palatino Linotype', 'Book Antiqua', serif;
+        }
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
+        }
+        @media (prefers-reduced-motion: reduce) {
+            html {
+                scroll-behavior: auto;
+            }
+            *,
+            *::before,
+            *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+        }
+        body {
+            font-family: var(--font-main);
+            background: var(--pure-white);
+            color: var(--charcoal);
+            line-height: 1.8;
+            -webkit-font-smoothing: antialiased;
+            overflow-x: hidden;
+        }
+        .skip-link {
+            position: absolute;
+            top: -100px;
+            left: 10px;
+            background: var(--primary-navy);
+            color: #fff;
+            padding: 10px 20px;
+            z-index: 10000;
+            border-radius: 0 0 var(--radius-small) var(--radius-small);
+            transition: top var(--transition-fast);
+            font-family: var(--font-main);
+            text-decoration: none;
+        }
+        .skip-link:focus {
+            top: 0;
+        }
+        .navbar {
+            position: sticky;
+            top: 0;
+            z-index: 9990;
+            background: rgba(255, 255, 255, 0.88);
+            backdrop-filter: blur(18px);
+            -webkit-backdrop-filter: blur(18px);
+            border-bottom: 2px solid var(--soft-gold);
+            padding: 0 2rem;
+            box-shadow: var(--shadow-soft);
+        }
+        .nav-container {
+            max-width: 1280px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 68px;
+        }
+        .nav-brand {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+            color: var(--primary-navy);
+            font-weight: 700;
+            font-size: 1.15rem;
+            letter-spacing: 0.5px;
+        }
+        .nav-brand .brand-icon {
+            font-size: 1.6rem;
+            color: var(--accent-gold);
+        }
+        .nav-brand small {
+            display: block;
+            font-size: 0.65rem;
+            color: var(--muted-text);
+            font-weight: 400;
+            letter-spacing: 0;
+        }
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+            align-items: center;
+        }
+        .nav-links a {
+            text-decoration: none;
+            color: var(--primary-navy);
+            font-size: 0.95rem;
+            position: relative;
+            padding: 6px 2px;
+            transition: color var(--transition-fast);
+            font-weight: 500;
+        }
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--accent-gold);
+            transition: width var(--transition-smooth);
+        }
+        .nav-links a:hover::after,
+        .nav-links a.active::after {
+            width: 100%;
+        }
+        .nav-cta {
+            background: var(--accent-gold);
+            color: #fff !important;
+            padding: 10px 20px !important;
+            border-radius: 25px;
+            font-weight: 600 !important;
+            box-shadow: 0 0 20px rgba(200, 164, 78, 0.35);
+            animation: glowPulse 2.5s ease-in-out infinite;
+        }
+        .nav-cta::after {
+            display: none !important;
+        }
+        @keyframes glowPulse {
+            0%,
+            100% {
+                box-shadow: 0 0 20px rgba(200, 164, 78, 0.35);
+            }
+            50% {
+                box-shadow: 0 0 35px rgba(200, 164, 78, 0.6);
+            }
+        }
+        .mobile-toggle {
+            display: none;
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 1.5rem;
+            color: var(--primary-navy);
+        }
+        @media (max-width: 768px) {
+            .mobile-toggle {
+                display: block;
+            }
+            .nav-links {
+                position: fixed;
+                top: 68px;
+                left: 0;
+                right: 0;
+                background: rgba(255, 255, 255, 0.97);
+                backdrop-filter: blur(20px);
+                flex-direction: column;
+                gap: 1rem;
+                padding: 1.5rem;
+                border-bottom: 2px solid var(--soft-gold);
+                transform: translateY(-120%);
+                transition: transform var(--transition-smooth);
+                z-index: 9980;
+            }
+            .nav-links.open {
+                transform: translateY(0);
+            }
+        }
+        .blog-hero {
+            position: relative;
+            height: 420px;
+            overflow: hidden;
+            display: flex;
+            align-items: flex-end;
+        }
+        .blog-hero img {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .blog-hero-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, rgba(26, 39, 68, 0.8) 0%, transparent 55%);
+            z-index: 1;
+        }
+        .blog-hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 3rem 2rem;
+            width: 100%;
+            color: #fff;
+        }
+        .blog-hero-content .blog-category {
+            display: inline-block;
+            background: var(--accent-gold);
+            padding: 5px 14px;
+            border-radius: 15px;
+            font-size: 0.75rem;
+            letter-spacing: 2px;
+            font-weight: 700;
+            text-transform: uppercase;
+            margin-bottom: 0.8rem;
+        }
+        .blog-hero-content h1 {
+            font-size: clamp(1.6rem, 3vw, 2.4rem);
+            font-weight: 700;
+            line-height: 1.3;
+            margin-bottom: 0.5rem;
+        }
+        .blog-meta {
+            font-size: 0.85rem;
+            opacity: 0.9;
+        }
+        .blog-meta span {
+            margin-right: 1rem;
+        }
+        .article-container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 3rem 2rem;
+            display: grid;
+            grid-template-columns: 220px 1fr;
+            gap: 3rem;
+        }
+        @media (max-width: 768px) {
+            .article-container {
+                grid-template-columns: 1fr;
+            }
+            .blog-hero {
+                height: 280px;
+            }
+        }
+        .toc {
+            position: sticky;
+            top: 90px;
+            align-self: start;
+            background: var(--soft-silver);
+            padding: 1.5rem;
+            border-radius: var(--radius-medium);
+            border: 1px solid var(--border-color);
+        }
+        .toc h3 {
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--primary-navy);
+            margin-bottom: 1rem;
+        }
+        .toc ul {
+            list-style: none;
+        }
+        .toc ul li {
+            margin-bottom: 8px;
+        }
+        .toc ul li a {
+            color: var(--secondary-blue);
+            text-decoration: none;
+            font-size: 0.85rem;
+            transition: color var(--transition-fast);
+        }
+        .toc ul li a:hover {
+            color: var(--accent-gold);
+        }
+        @media (max-width: 768px) {
+            .toc {
+                position: static;
+                margin-bottom: 2rem;
+            }
+        }
+        .article-body h2 {
+            font-size: 1.5rem;
+            color: var(--primary-navy);
+            margin: 2.5rem 0 1rem;
+            font-weight: 700;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--soft-gold);
+        }
+        .article-body h3 {
+            font-size: 1.2rem;
+            color: var(--secondary-blue);
+            margin: 1.8rem 0 0.8rem;
+            font-weight: 700;
+        }
+        .article-body p {
+            margin-bottom: 1.2rem;
+            font-size: 1rem;
+            color: var(--charcoal);
+            line-height: 1.8;
+        }
+        .article-body ul,
+        .article-body ol {
+            margin: 1rem 0 1.5rem 1.5rem;
+        }
+        .article-body ul li,
+        .article-body ol li {
+            margin-bottom: 0.6rem;
+            font-size: 0.95rem;
+        }
+        .highlight-box {
+            background: var(--light-blue);
+            border-left: 4px solid var(--accent-gold);
+            padding: 1.5rem;
+            border-radius: 0 var(--radius-medium) var(--radius-medium) 0;
+            margin: 2rem 0;
+        }
+        .highlight-box p {
+            margin: 0;
+            font-weight: 600;
+            color: var(--primary-navy);
+        }
+        .cta-banner {
+            background: linear-gradient(135deg, var(--primary-navy), var(--secondary-blue));
+            color: #fff;
+            padding: 2.5rem;
+            border-radius: var(--radius-large);
+            text-align: center;
+            margin: 3rem 0;
+        }
+        .cta-banner h3 {
+            color: #fff;
+            margin-bottom: 0.8rem;
+            font-size: 1.3rem;
+        }
+        .cta-banner .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--accent-gold);
+            color: #fff;
+            padding: 13px 28px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all var(--transition-smooth);
+            font-family: var(--font-main);
+        }
+        .cta-banner .btn:hover {
+            background: #b8933e;
+            transform: translateY(-3px);
+        }
+        .related-cards {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+            margin-top: 3rem;
+        }
+        @media (max-width: 600px) {
+            .related-cards {
+                grid-template-columns: 1fr;
+            }
+        }
+        .related-card {
+            background: var(--pure-white);
+            border-radius: var(--radius-medium);
+            overflow: hidden;
+            box-shadow: var(--shadow-soft);
+            border: 1px solid var(--border-color);
+            transition: all var(--transition-smooth);
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+        .related-card:hover {
+            transform: translateY(-6px);
+            box-shadow: var(--shadow-premium);
+        }
+        .related-card img {
+            width: 100%;
+            height: 160px;
+            object-fit: cover;
+        }
+        .related-card-body {
+            padding: 1.2rem;
+        }
+        .related-card-body h4 {
+            color: var(--primary-navy);
+            font-size: 1rem;
+            margin-bottom: 0.3rem;
+        }
+        .related-card-body span {
+            color: var(--accent-gold);
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+        .site-footer {
+            background: var(--primary-navy);
+            color: #d5d5d5;
+            padding: 3rem 2rem 1.5rem;
+            text-align: center;
+            font-size: 0.85rem;
+        }
+        .site-footer a {
+            color: var(--accent-gold);
+            text-decoration: none;
+        }
+        .reveal {
+            opacity: 0;
+            transform: translateY(25px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+        .reveal.revealed {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        #back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            background: var(--accent-gold);
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            font-size: 1.2rem;
+            z-index: 9900;
+            box-shadow: var(--shadow-medium);
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all var(--transition-smooth);
+            pointer-events: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        #back-to-top.visible {
+            opacity: 1;
+            transform: translateY(0);
+            pointer-events: auto;
+        }
+    </style>
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Skip to content</a>
+    <header class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-brand"><span class="brand-icon">&#9878;</span><span>IBLC LLP<small>SECP Registered</small></span></a>
+            <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle menu"><i class="fa-solid fa-bars"></i></button>
+            <nav>
+                <ul class="nav-links" id="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#departments">Departments</a></li>
+                    <li><a href="index.html#about">About</a></li>
+                    <li><a href="index.html#blogs" class="active">Blogs</a></li>
+                    <li><a href="contactus.html">Contact</a></li>
+                    <li><a href="contactus.html" class="nav-cta">Book Strategy Session</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main id="main-content">
+        <div class="blog-hero">
+            <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1600&q=80"
+            alt="Pakistani startup team discussing US LLC structure for global sales"
+            width="1600" height="420" loading="eager"
+            onerror="this.style.background='linear-gradient(135deg,#2c3e50,#1a2744)'; this.style.minHeight='420px';">
+            <div class="blog-hero-overlay"></div>
+            <div class="blog-hero-content">
+                <span class="blog-category">Entity Structuring</span>
+                <h1>How Pakistani Startups Can Structure a US LLC for Global Sales</h1>
+                <div class="blog-meta"><span><i class="fa-solid fa-user"></i> IBLC Advisory Team</span><span><i class="fa-solid fa-calendar"></i> June 2026</span><span><i class="fa-solid fa-clock"></i> 8 min read</span></div>
+            </div>
+        </div>
+        <div class="article-container">
+            <aside class="toc" aria-label="Table of contents">
+                <h3>Contents</h3>
+                <ul>
+                    <li><a href="#intro">Introduction</a></li>
+                    <li><a href="#why-us">Why Founders Choose US Structures</a></li>
+                    <li><a href="#what-llc">What an LLC Can Help With</a></li>
+                    <li><a href="#banking">Banking, Payment Processors, and Compliance</a></li>
+                    <li><a href="#tax">Tax and Reporting Considerations</a></li>
+                    <li><a href="#c-corp">When a C Corp May Be Better</a></li>
+                    <li><a href="#checklist">Final Checklist</a></li>
+                </ul>
+            </aside>
+            <article class="article-body">
+                <section id="intro" class="reveal">
+                    <h2>Introduction</h2>
+                    <p>For Pakistani founders building digital products, SaaS platforms, or e commerce brands, the ability to sell globally often depends on having a formal US business presence. International customers, payment processors, and institutional partners frequently require a recognizable corporate structure. This article explains how Pakistani startups can strategically structure a US LLC to unlock global sales channels while maintaining operational efficiency from Pakistan.</p>
+                </section>
+                <section id="why-us" class="reveal">
+                    <h2>Why Founders Choose US Structures</h2>
+                    <p>The United States offers one of the most mature and internationally respected business environments. A US LLC provides limited liability protection while offering flexible tax treatment. For Pakistani entrepreneurs, the key advantages include access to Stripe and other US based payment gateways, credibility with international B2B clients, and a clear legal entity for signing global contracts.</p>
+                    <div class="highlight-box"><p>&#128161; Key Insight: A US LLC can be formed entirely online without requiring US citizenship or residency. Pakistani founders can serve as both the owner and manager of the entity.</p></div>
+                </section>
+                <section id="what-llc" class="reveal">
+                    <h2>What an LLC Can Help With</h2>
+                    <p>An LLC serves as the legal face of your international business. With a registered US LLC, your startup can open a US business bank account, receive payments in USD through major processors, enter into enforceable commercial contracts with US and international partners, and apply for relevant business licenses in specific states. The entity also creates a clear separation between personal assets and business liabilities, which is essential for professional credibility.</p>
+                    <h3>Choosing the Right State</h3>
+                    <p>Delaware remains the most popular choice due to its well developed corporate case law and business friendly statutes. Wyoming offers lower annual fees and strong privacy protections. For startups focused on venture capital, Delaware C Corps are the standard, but for most digital exporters, a Wyoming or Delaware LLC provides an excellent starting point.</p>
+                </section>
+                <section id="banking" class="reveal">
+                    <h2>Banking, Payment Processors, and Compliance Points</h2>
+                    <p>Once the LLC is registered, the next critical step is obtaining an Employer Identification Number from the IRS. This number is essential for opening a US business bank account. Several fintech platforms now allow non resident founders to open US business accounts remotely, though requirements vary. Pakistani founders must also understand State Bank of Pakistan regulations regarding outward investments and repatriation of funds. Proper documentation and compliance with SBP procedures are essential to avoid regulatory complications.</p>
+                </section>
+                <section id="tax" class="reveal">
+                    <h2>Tax and Reporting Considerations</h2>
+                    <p>A single member LLC owned by a non resident is typically treated as a disregarded entity for US federal tax purposes, meaning the LLC itself does not pay US taxes. Instead, the owner reports income in their country of residence. However, US sourced income may still be subject to withholding, and annual filings such as Form 5472 and a pro forma Form 1120 are required. Engaging a qualified international tax advisor is strongly recommended to ensure full compliance with both US and Pakistani tax obligations.</p>
+                </section>
+                <section id="c-corp" class="reveal">
+                    <h2>When a C Corp May Be Better</h2>
+                    <p>If your startup plans to raise venture capital from US investors, a Delaware C Corporation becomes the preferred structure. C Corps allow for multiple classes of stock, making them attractive to institutional investors. However, they involve more complex compliance requirements and potential double taxation. For most bootstrapped digital exporters and service businesses, an LLC remains the more practical and cost effective choice in the early stages.</p>
+                </section>
+                <section id="checklist" class="reveal">
+                    <h2>Final Checklist</h2>
+                    <ol>
+                        <li>Select the appropriate US state for registration based on your business goals.</li>
+                        <li>Engage a registered agent service in the chosen state.</li>
+                        <li>File the Certificate of Formation with the state authority.</li>
+                        <li>Obtain an EIN from the IRS for banking and tax purposes.</li>
+                        <li>Open a US business bank account through a remote friendly provider.</li>
+                        <li>Understand SBP outward investment regulations and file necessary documentation.</li>
+                        <li>Maintain annual compliance filings and consult with tax professionals regularly.</li>
+                    </ol>
+                </section>
+                <div class="cta-banner reveal">
+                    <h3>Need Help Structuring Your US Entity?</h3>
+                    <p style="margin-bottom:1.5rem;">Our CERTIFY team guides Pakistani founders through every step of US LLC formation, from state selection to SBP compliance.</p>
+                    <a href="contactus.html" class="btn">Book a Strategy Session <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+            </article>
+        </div>
+        <div style="max-width:900px;margin:0 auto;padding:0 2rem 3rem;">
+            <h3 style="color:var(--primary-navy);margin-bottom:1rem;">Related Articles</h3>
+            <div class="related-cards">
+                <a href="blog2.html" class="related-card">
+                    <img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=1600&q=80"
+                    alt="Cross border contracts" width="400" height="160" loading="lazy"
+                    onerror="this.style.background='linear-gradient(135deg,#d5d0c5,#e9e5da)';">
+                    <div class="related-card-body"><h4>Why Cross Border Contracts Fail and How to Protect Your Revenue</h4><span>Read Article &#8594;</span></div>
+                </a>
+                <a href="blog3.html" class="related-card">
+                    <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=1600&q=80"
+                    alt="Tax planning" width="400" height="160" loading="lazy"
+                    onerror="this.style.background='linear-gradient(135deg,#d5d0c5,#e9e5da)';">
+                    <div class="related-card-body"><h4>International Tax Planning Basics for Digital Exporters</h4><span>Read Article &#8594;</span></div>
+                </a>
+            </div>
+        </div>
+    </main>
+    <footer class="site-footer">
+        <p>Copyright &copy; 2026 International Business Law Consultants LLP. All rights reserved.</p>
+        <p style="font-size:0.72rem;color:#888;margin-top:0.3rem;">This article is for general corporate advisory purposes and does not replace jurisdiction specific legal advice.</p>
+    </footer>
+    <button id="back-to-top" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
+    <script>
+        (function() {
+            const mobileToggle = document.getElementById('mobile-toggle');
+            const navLinks = document.getElementById('nav-links');
+            if (mobileToggle && navLinks) {
+                mobileToggle.addEventListener('click', function() {
+                    const isOpen = navLinks.classList.toggle('open');
+                    mobileToggle.querySelector('i').className = isOpen ? 'fa-solid fa-xmark' :
+                        'fa-solid fa-bars';
+                });
+                navLinks.querySelectorAll('a').forEach(function(l) {
+                    l.addEventListener('click', function() { navLinks.classList.remove(
+                            'open'); });
+                });
+            }
+            const reveals = document.querySelectorAll('.reveal');
+            const obs = new IntersectionObserver(function(e) {
+                e.forEach(function(en) { if (en.isIntersecting) { en.target.classList.add(
+                        'revealed');
+                        obs.unobserve(en.target); } });
+            }, { threshold: 0.15 });
+            reveals.forEach(function(r) { obs.observe(r); });
+            const btt = document.getElementById('back-to-top');
+            window.addEventListener('scroll', function() {
+                btt.classList.toggle('visible', window.scrollY > 500);
+            });
+            btt.addEventListener('click', function() { window.scrollTo({ top: 0, behavior: 'smooth' }); });
+            document.querySelectorAll('img').forEach(function(i) {
+                i.addEventListener('error', function() { this.style.background =
+                        'linear-gradient(135deg,#d4cfc4,#e8e4d8)';
+                    this.style.minHeight = '160px'; });
+            });
+        })();
+    </script>
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Article",
+            "headline": "How Pakistani Startups Can Structure a US LLC for Global Sales",
+            "author": { "@type": "Organization", "name": "IBLC LLP Advisory Team" },
+            "datePublished": "2026-06-15",
+            "description": "Guide for Pakistani founders on structuring a US LLC to access global markets and payment systems.",
+            "publisher": { "@type": "Organization", "name": "International Business Law Consultants LLP" }
+        }
+    </script>
+</body>
+</html>

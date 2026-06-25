@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book a Corporate Strategy Session | International Business Law Consultants LLP</title>
+    <meta name="description" content="Schedule your confidential corporate strategy consultation with IBLC LLP. Let our team help you expand your business globally with structured legal and tax planning.">
+    <link rel="canonical" href="https://www.iblc-llp.com/contactus.html">
+    <meta property="og:title" content="Book a Corporate Strategy Session | IBLC LLP">
+    <meta property="og:description" content="Start your global expansion journey with a confidential consultation session.">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        :root {
+            --primary-navy: #1a2744;
+            --secondary-blue: #2c4a7c;
+            --light-blue: #e8f0fb;
+            --accent-gold: #c8a44e;
+            --soft-gold: #d4b96a;
+            --pearl-white: #fafaf7;
+            --pure-white: #ffffff;
+            --silver: #e8e8e4;
+            --soft-silver: #f3f3f0;
+            --charcoal: #3a3a3a;
+            --muted-text: #6b6b6b;
+            --border-color: #e0ded8;
+            --success-green: #2d8a56;
+            --error-red: #c0392b;
+            --shadow-soft: 0 2px 12px rgba(0, 0, 0, 0.06);
+            --shadow-medium: 0 8px 30px rgba(0, 0, 0, 0.09);
+            --shadow-premium: 0 20px 50px rgba(0, 0, 0, 0.12);
+            --radius-small: 8px;
+            --radius-medium: 14px;
+            --radius-large: 22px;
+            --container-width: 1100px;
+            --transition-fast: 0.2s ease;
+            --transition-smooth: 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            --font-main: 'Times New Roman', Georgia, 'Palatino Linotype', 'Book Antiqua', serif;
+        }
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
+        }
+        @media (prefers-reduced-motion: reduce) {
+            html {
+                scroll-behavior: auto;
+            }
+            *,
+            *::before,
+            *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+        }
+        body {
+            font-family: var(--font-main);
+            background: var(--pure-white);
+            color: var(--charcoal);
+            line-height: 1.7;
+        }
+        .skip-link {
+            position: absolute;
+            top: -100px;
+            left: 10px;
+            background: var(--primary-navy);
+            color: #fff;
+            padding: 10px 20px;
+            z-index: 10000;
+            border-radius: 0 0 var(--radius-small) var(--radius-small);
+            transition: top var(--transition-fast);
+            font-family: var(--font-main);
+            text-decoration: none;
+        }
+        .skip-link:focus {
+            top: 0;
+        }
+        .navbar {
+            position: sticky;
+            top: 0;
+            z-index: 9990;
+            background: rgba(255, 255, 255, 0.88);
+            backdrop-filter: blur(18px);
+            -webkit-backdrop-filter: blur(18px);
+            border-bottom: 2px solid var(--soft-gold);
+            padding: 0 2rem;
+            box-shadow: var(--shadow-soft);
+        }
+        .nav-container {
+            max-width: 1280px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 68px;
+        }
+        .nav-brand {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+            color: var(--primary-navy);
+            font-weight: 700;
+            font-size: 1.15rem;
+        }
+        .nav-brand .brand-icon {
+            font-size: 1.6rem;
+            color: var(--accent-gold);
+        }
+        .nav-brand small {
+            display: block;
+            font-size: 0.65rem;
+            color: var(--muted-text);
+        }
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+            align-items: center;
+        }
+        .nav-links a {
+            text-decoration: none;
+            color: var(--primary-navy);
+            font-size: 0.95rem;
+            font-weight: 500;
+            position: relative;
+            padding: 6px 2px;
+        }
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--accent-gold);
+            transition: width var(--transition-smooth);
+        }
+        .nav-links a:hover::after,
+        .nav-links a.active::after {
+            width: 100%;
+        }
+        .nav-cta {
+            background: var(--accent-gold);
+            color: #fff !important;
+            padding: 10px 20px !important;
+            border-radius: 25px;
+            font-weight: 600 !important;
+        }
+        .nav-cta::after {
+            display: none !important;
+        }
+        .mobile-toggle {
+            display: none;
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 1.5rem;
+            color: var(--primary-navy);
+        }
+        @media (max-width: 768px) {
+            .mobile-toggle {
+                display: block;
+            }
+            .nav-links {
+                position: fixed;
+                top: 68px;
+                left: 0;
+                right: 0;
+                background: rgba(255, 255, 255, 0.97);
+                flex-direction: column;
+                gap: 1rem;
+                padding: 1.5rem;
+                border-bottom: 2px solid var(--soft-gold);
+                transform: translateY(-120%);
+                transition: transform var(--transition-smooth);
+                z-index: 9980;
+            }
+            .nav-links.open {
+                transform: translateY(0);
+            }
+        }
+        .contact-hero {
+            position: relative;
+            min-height: 320px;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+        }
+        .contact-hero img {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .contact-hero-overlay {
+            position: absolute;
+            inset: 0;
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(3px);
+            z-index: 1;
+        }
+        .contact-hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 3rem 2rem;
+            text-align: center;
+            width: 100%;
+        }
+        .contact-hero-content h1 {
+            font-size: clamp(1.8rem, 3vw, 2.5rem);
+            color: var(--primary-navy);
+            font-weight: 700;
+        }
+        .contact-hero-content p {
+            color: var(--charcoal);
+            max-width: 600px;
+            margin: 0.8rem auto 0;
+            font-size: 1rem;
+        }
+        .form-section {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 3rem 2rem 5rem;
+        }
+        .form-card {
+            background: var(--pure-white);
+            border-radius: var(--radius-large);
+            padding: 3rem;
+            box-shadow: var(--shadow-premium);
+            border: 1px solid var(--border-color);
+            position: relative;
+            overflow: hidden;
+        }
+        .form-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--accent-gold), var(--soft-gold), var(--accent-gold));
+            background-size: 200% 100%;
+            animation: shimmerLine 3s ease-in-out infinite;
+        }
+        @keyframes shimmerLine {
+            0%,
+            100% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+        }
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+        @media (max-width: 600px) {
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+            .form-card {
+                padding: 1.5rem;
+            }
+        }
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        .form-group label {
+            display: block;
+            font-weight: 700;
+            color: var(--primary-navy);
+            margin-bottom: 6px;
+            font-size: 0.9rem;
+            letter-spacing: 0.3px;
+        }
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px 16px;
+            border: 2px solid var(--border-color);
+            border-radius: var(--radius-small);
+            font-family: var(--font-main);
+            font-size: 0.95rem;
+            background: var(--pearl-white);
+            transition: all var(--transition-fast);
+            color: var(--charcoal);
+        }
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--accent-gold);
+            box-shadow: 0 0 0 4px rgba(200, 164, 78, 0.12);
+            background: #fff;
+            animation: focusGlow 0.5s ease;
+        }
+        @keyframes focusGlow {
+            0% {
+                box-shadow: 0 0 0 0 rgba(200, 164, 78, 0.3);
+            }
+            100% {
+                box-shadow: 0 0 0 4px rgba(200, 164, 78, 0.12);
+            }
+        }
+        .form-group .error-msg {
+            color: var(--error-red);
+            font-size: 0.78rem;
+            margin-top: 4px;
+            display: none;
+            animation: fadeUp 0.3s ease;
+        }
+        @keyframes fadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(8px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .form-group.error input,
+        .form-group.error select,
+        .form-group.error textarea {
+            border-color: var(--error-red);
+            background: #fffafa;
+        }
+        .form-group.error .error-msg {
+            display: block;
+        }
+        .checkbox-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .checkbox-group label {
+            display: flex;
+            align-items: center;
+            gap: 7px;
+            background: var(--soft-silver);
+            padding: 8px 14px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 0.85rem;
+            font-weight: 500;
+            border: 2px solid transparent;
+            transition: all var(--transition-fast);
+        }
+        .checkbox-group label:hover {
+            border-color: var(--soft-gold);
+            background: #fff;
+        }
+        .checkbox-group input[type="checkbox"] {
+            width: auto;
+            accent-color: var(--accent-gold);
+        }
+        .form-submit {
+            text-align: center;
+            margin-top: 2rem;
+        }
+        .btn-submit {
+            background: var(--accent-gold);
+            color: #fff;
+            border: none;
+            padding: 14px 40px;
+            border-radius: 25px;
+            font-family: var(--font-main);
+            font-size: 1rem;
+            font-weight: 700;
+            cursor: pointer;
+            letter-spacing: 0.5px;
+            transition: all var(--transition-smooth);
+            box-shadow: 0 6px 25px rgba(200, 164, 78, 0.35);
+            position: relative;
+            overflow: hidden;
+        }
+        .btn-submit:hover {
+            background: #b8933e;
+            transform: translateY(-3px);
+            box-shadow: 0 12px 35px rgba(200, 164, 78, 0.5);
+        }
+        .btn-submit:active {
+            transform: scale(0.97);
+        }
+        .reassurance {
+            text-align: center;
+            margin-top: 1.5rem;
+            color: var(--muted-text);
+            font-size: 0.82rem;
+            font-style: italic;
+        }
+        .reassurance i {
+            color: var(--accent-gold);
+        }
+        .success-overlay {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(255, 255, 255, 0.9);
+            z-index: 99999;
+            align-items: center;
+            justify-content: center;
+        }
+        .success-overlay.show {
+            display: flex;
+        }
+        .success-card {
+            background: #fff;
+            padding: 3rem;
+            border-radius: var(--radius-large);
+            text-align: center;
+            box-shadow: var(--shadow-premium);
+            max-width: 480px;
+            animation: fadeUp 0.5s ease;
+        }
+        .success-card .success-icon {
+            font-size: 3rem;
+            color: var(--success-green);
+            margin-bottom: 1rem;
+        }
+        .success-card h2 {
+            color: var(--primary-navy);
+            margin-bottom: 0.8rem;
+        }
+        .success-card p {
+            color: var(--charcoal);
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+        .trust-badges-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            justify-content: center;
+            margin-bottom: 2rem;
+        }
+        .trust-badge {
+            background: var(--light-blue);
+            padding: 8px 18px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            color: var(--secondary-blue);
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+        .site-footer {
+            background: var(--primary-navy);
+            color: #d5d5d5;
+            padding: 3rem 2rem 1.5rem;
+            text-align: center;
+            font-size: 0.85rem;
+        }
+        .reveal {
+            opacity: 0;
+            transform: translateY(25px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+        .reveal.revealed {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Skip to content</a>
+    <header class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-brand"><span class="brand-icon">&#9878;</span><span>IBLC LLP<small>SECP Registered</small></span></a>
+            <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle menu"><i class="fa-solid fa-bars"></i></button>
+            <nav>
+                <ul class="nav-links" id="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#departments">Departments</a></li>
+                    <li><a href="index.html#about">About</a></li>
+                    <li><a href="index.html#blogs">Blogs</a></li>
+                    <li><a href="contactus.html" class="active">Contact</a></li>
+                    <li><a href="contactus.html" class="nav-cta">Book Strategy Session</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main id="main-content">
+        <div class="contact-hero">
+            <img src="https://images.unsplash.com/photo-1556761175-4b46a572b786?auto=format&fit=crop&w=1600&q=80"
+            alt="Modern open office for corporate consultation"
+            width="1600" height="320" loading="eager"
+            onerror="this.style.background='linear-gradient(135deg,#e8e4d8,#f5f2ea)'; this.style.minHeight='320px';">
+            <div class="contact-hero-overlay"></div>
+            <div class="contact-hero-content">
+                <h1>Start Your Global Expansion Journey</h1>
+                <p>Let our team of corporate consultants protect and scale your international venture. Please complete the quick brief below to schedule your corporate strategy session.</p>
+            </div>
+        </div>
+        <div class="form-section reveal">
+            <div class="trust-badges-row">
+                <span class="trust-badge"><i class="fa-solid fa-lock"></i> Confidential Intake</span>
+                <span class="trust-badge"><i class="fa-solid fa-certificate"></i> SECP Registered</span>
+                <span class="trust-badge"><i class="fa-solid fa-globe"></i> Global Advisory</span>
+            </div>
+            <div class="form-card" id="consultation-form-card">
+                <form id="consultation-form" novalidate>
+                    <div class="form-row">
+                        <div class="form-group" id="group-name">
+                            <label for="full-name">Full Contact Name <span style="color:var(--error-red);">*</span></label>
+                            <input type="text" id="full-name" name="full-name" placeholder="Your full name" required aria-required="true">
+                            <span class="error-msg">Please enter your full contact name.</span>
+                        </div>
+                        <div class="form-group" id="group-company">
+                            <label for="company">Company or Enterprise Name</label>
+                            <input type="text" id="company" name="company" placeholder="Your company name">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group" id="group-email">
+                            <label for="email">Email Address <span style="color:var(--error-red);">*</span></label>
+                            <input type="email" id="email" name="email" placeholder="your@email.com" required aria-required="true">
+                            <span class="error-msg">Please enter a valid email address.</span>
+                        </div>
+                        <div class="form-group" id="group-phone">
+                            <label for="phone">Phone or WhatsApp Number</label>
+                            <input type="tel" id="phone" name="phone" placeholder="+92 300 1234567">
+                        </div>
+                    </div>
+                    <div class="form-group" id="group-country">
+                        <label for="target-country">Target Country or Jurisdiction</label>
+                        <select id="target-country" name="target-country">
+                            <option value="">Select a jurisdiction...</option>
+                            <option value="US">United States</option>
+                            <option value="UK">United Kingdom</option>
+                            <option value="UAE">United Arab Emirates</option>
+                            <option value="SG">Singapore</option>
+                            <option value="PK">Pakistan</option>
+                            <option value="Multi">Multi Jurisdictional</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Jurisdictions of Interest</label>
+                        <div class="checkbox-group">
+                            <label><input type="checkbox" name="jurisdiction" value="US"> United States, US LLC or C Corp</label>
+                            <label><input type="checkbox" name="jurisdiction" value="UK"> United Kingdom, UK LTD</label>
+                            <label><input type="checkbox" name="jurisdiction" value="UAE"> United Arab Emirates</label>
+                            <label><input type="checkbox" name="jurisdiction" value="SG"> Singapore</label>
+                            <label><input type="checkbox" name="jurisdiction" value="Multi"> Other or Multi Jurisdictional</label>
+                        </div>
+                    </div>
+                    <div class="form-group" id="group-service">
+                        <label for="service">Primary Service Required <span style="color:var(--error-red);">*</span></label>
+                        <select id="service" name="service" required aria-required="true">
+                            <option value="">Select a service...</option>
+                            <option value="CERTIFY">Entity Setup and Registration, CERTIFY</option>
+                            <option value="DRAFTIT">Contract Drafting and Privacy, DRAFTIT</option>
+                            <option value="iTAXO">Tax Strategy and Screening, iTAXO</option>
+                            <option value="JURIST">Court Litigation and AML Compliance, JURIST PANEL</option>
+                        </select>
+                        <span class="error-msg">Please select a primary service.</span>
+                    </div>
+                    <div class="form-group" id="group-summary">
+                        <label for="summary">Brief Project Summary <span style="color:var(--error-red);">*</span></label>
+                        <textarea id="summary" name="summary" rows="4" placeholder="Describe your business, target market, and what you need help with..." required aria-required="true"></textarea>
+                        <span class="error-msg">Please provide a brief summary of your project.</span>
+                    </div>
+                    <div class="form-group">
+                        <label>Preferred Consultation Mode</label>
+                        <div class="checkbox-group">
+                            <label><input type="radio" name="consultation-mode" value="online" checked> Online Meeting</label>
+                            <label><input type="radio" name="consultation-mode" value="phone"> Phone Call</label>
+                            <label><input type="radio" name="consultation-mode" value="inperson"> In Person Meeting</label>
+                        </div>
+                    </div>
+                    <div class="form-submit">
+                        <button type="submit" class="btn-submit">Request Strategy Session <i class="fa-solid fa-arrow-right"></i></button>
+                    </div>
+                    <p class="reassurance"><i class="fa-solid fa-shield-halved"></i> All data submitted through this portal is treated with strict professional confidentiality under corporate data security protocols.</p>
+                </form>
+            </div>
+        </div>
+    </main>
+    <footer class="site-footer">
+        <p>Copyright &copy; 2026 International Business Law Consultants LLP. All rights reserved.</p>
+        <p style="font-size:0.72rem;color:#888;">SECP Registered Corporate Advisory Firm</p>
+    </footer>
+    <div class="success-overlay" id="success-overlay" aria-hidden="true">
+        <div class="success-card">
+            <div class="success-icon"><i class="fa-solid fa-circle-check"></i></div>
+            <h2>Thank You</h2>
+            <p>Your consultation request has been received. Our team will review your brief and contact you shortly to schedule your corporate strategy session.</p>
+            <button class="btn-submit" onclick="document.getElementById('success-overlay').classList.remove('show')">Close</button>
+        </div>
+    </div>
+    <script>
+        (function() {
+            const mt = document.getElementById('mobile-toggle');
+            const nl = document.getElementById('nav-links');
+            if (mt && nl) {
+                mt.addEventListener('click', function() {
+                    const o = nl.classList.toggle('open');
+                    mt.querySelector('i').className = o ? 'fa-solid fa-xmark' : 'fa-solid fa-bars';
+                });
+                nl.querySelectorAll('a').forEach(function(l) { l.addEventListener('click', function() { nl
+                        .classList.remove('open'); }); });
+            }
+            const rev = document.querySelectorAll('.reveal');
+            const obs = new IntersectionObserver(function(e) { e.forEach(function(en) { if (en.isIntersecting) { en
+                        .target.classList.add('revealed');
+                        obs.unobserve(en.target); } }); }, { threshold: 0.15 });
+            rev.forEach(function(r) { obs.observe(r); });
+
+            const form = document.getElementById('consultation-form');
+            const successOverlay = document.getElementById('success-overlay');
+            form.addEventListener('submit', function(e) {
+                e.preventDefault();
+                let valid = true;
+                const name = document.getElementById('full-name');
+                const email = document.getElementById('email');
+                const service = document.getElementById('service');
+                const summary = document.getElementById('summary');
+                // Reset errors
+                document.querySelectorAll('.form-group').forEach(function(g) { g.classList.remove(
+                        'error'); });
+                if (!name.value.trim()) { document.getElementById('group-name').classList.add('error');
+                    valid = false; }
+                if (!email.value.trim() || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value)) { document.getElementById(
+                        'group-email').classList.add('error');
+                    valid = false; }
+                if (!service.value) { document.getElementById('group-service').classList.add('error');
+                    valid = false; }
+                if (!summary.value.trim()) { document.getElementById('group-summary').classList.add('error');
+                    valid = false; }
+                if (valid) {
+                    successOverlay.classList.add('show');
+                    form.reset();
+                    document.body.style.overflow = 'hidden';
+                }
+            });
+            successOverlay.addEventListener('click', function(e) {
+                if (e.target === successOverlay) {
+                    successOverlay.classList.remove('show');
+                    document.body.style.overflow = '';
+                }
+            });
+        })();
+    </script>
+</body>
+</html>
