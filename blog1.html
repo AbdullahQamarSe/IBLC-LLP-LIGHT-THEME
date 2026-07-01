@@ -85,6 +85,8 @@
         .skip-link:focus {
             top: 0;
         }
+
+        /* Navbar */
         .navbar {
             position: sticky;
             top: 0;
@@ -93,8 +95,13 @@
             backdrop-filter: blur(18px);
             -webkit-backdrop-filter: blur(18px);
             border-bottom: 2px solid var(--soft-gold);
-            padding: 0 2rem;
+            padding: 0 1.5rem;
+            transition: all var(--transition-smooth);
             box-shadow: var(--shadow-soft);
+        }
+        .navbar.scrolled {
+            box-shadow: var(--shadow-medium);
+            background: rgba(255, 255, 255, 0.95);
         }
         .nav-container {
             max-width: 1280px;
@@ -102,43 +109,42 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
-            height: 68px;
+            min-height: 72px;
         }
         .nav-brand {
             display: flex;
             align-items: center;
-            gap: 10px;
             text-decoration: none;
-            color: var(--primary-navy);
-            font-weight: 700;
-            font-size: 1.15rem;
-            letter-spacing: 0.5px;
+            flex-shrink: 0;
         }
-        .nav-brand .brand-icon {
-            font-size: 1.6rem;
-            color: var(--accent-gold);
-        }
-        .nav-brand small {
+        .nav-brand img {
             display: block;
-            font-size: 0.65rem;
-            color: var(--muted-text);
-            font-weight: 400;
-            letter-spacing: 0;
+            max-height: 125px;
+            width: auto;
+            height: auto;
+        }
+        @media (max-width: 2500px) {
+            .nav-brand img {
+                max-height: 125px;
+            }
         }
         .nav-links {
             display: flex;
             list-style: none;
-            gap: 2rem;
+            gap: 1.2rem;
             align-items: center;
+            flex-wrap: wrap;
         }
         .nav-links a {
             text-decoration: none;
             color: var(--primary-navy);
-            font-size: 0.95rem;
+            font-size: 0.85rem;
             position: relative;
             padding: 6px 2px;
             transition: color var(--transition-fast);
             font-weight: 500;
+            letter-spacing: 0.3px;
+            white-space: nowrap;
         }
         .nav-links a::after {
             content: '';
@@ -154,14 +160,25 @@
         .nav-links a.active::after {
             width: 100%;
         }
+        .nav-links a.active {
+            color: var(--accent-gold);
+        }
         .nav-cta {
             background: var(--accent-gold);
             color: #fff !important;
-            padding: 10px 20px !important;
+            padding: 8px 16px !important;
             border-radius: 25px;
             font-weight: 600 !important;
+            letter-spacing: 0.5px;
             box-shadow: 0 0 20px rgba(200, 164, 78, 0.35);
             animation: glowPulse 2.5s ease-in-out infinite;
+            transition: all var(--transition-smooth) !important;
+            white-space: nowrap;
+        }
+        .nav-cta:hover {
+            background: #b8933e;
+            box-shadow: 0 0 30px rgba(200, 164, 78, 0.55);
+            transform: translateY(-2px);
         }
         .nav-cta::after {
             display: none !important;
@@ -180,16 +197,31 @@
             background: none;
             border: none;
             cursor: pointer;
-            font-size: 1.5rem;
+            padding: 8px;
             color: var(--primary-navy);
+            font-size: 1.5rem;
+            margin-left: auto;
+            z-index: 10;
         }
-        @media (max-width: 768px) {
+        @media (max-width: 1024px) {
+            .nav-links {
+                gap: 0.8rem;
+            }
+            .nav-links a {
+                font-size: 0.8rem;
+            }
+            .nav-cta {
+                padding: 6px 12px !important;
+                font-size: 0.75rem !important;
+            }
+        }
+        @media (max-width: 900px) {
             .mobile-toggle {
                 display: block;
             }
             .nav-links {
                 position: fixed;
-                top: 68px;
+                top: 72px;
                 left: 0;
                 right: 0;
                 background: rgba(255, 255, 255, 0.97);
@@ -198,12 +230,17 @@
                 gap: 1rem;
                 padding: 1.5rem;
                 border-bottom: 2px solid var(--soft-gold);
+                box-shadow: var(--shadow-medium);
                 transform: translateY(-120%);
                 transition: transform var(--transition-smooth);
                 z-index: 9980;
+                flex-wrap: nowrap;
             }
             .nav-links.open {
                 transform: translateY(0);
+            }
+            .nav-links a {
+                font-size: 1rem;
             }
         }
         .blog-hero {
@@ -259,6 +296,16 @@
         .blog-meta span {
             margin-right: 1rem;
         }
+        @media (max-width: 768px) {
+            .blog-hero {
+                height: 280px;
+            }
+            .blog-hero-content {
+                padding: 2rem 1.2rem;
+            }
+        }
+
+        /* ── Article Layout ────────────────── */
         .article-container {
             max-width: var(--container-width);
             margin: 0 auto;
@@ -266,15 +313,17 @@
             display: grid;
             grid-template-columns: 220px 1fr;
             gap: 3rem;
+            align-items: start;
         }
         @media (max-width: 768px) {
             .article-container {
                 grid-template-columns: 1fr;
-            }
-            .blog-hero {
-                height: 280px;
+                gap: 1.5rem;
+                padding: 2rem 1.2rem;
             }
         }
+
+        /* ── Table of Contents ─────────────── */
         .toc {
             position: sticky;
             top: 90px;
@@ -283,6 +332,7 @@
             padding: 1.5rem;
             border-radius: var(--radius-medium);
             border: 1px solid var(--border-color);
+            z-index: 1;
         }
         .toc h3 {
             font-size: 0.85rem;
@@ -309,8 +359,18 @@
         @media (max-width: 768px) {
             .toc {
                 position: static;
-                margin-bottom: 2rem;
+                top: auto;
+                z-index: auto;
+                margin-bottom: 0.5rem;
+                width: 100%;
             }
+        }
+
+        /* ── Article Body ──────────────────── */
+        .article-body {
+            position: relative;
+            z-index: 0;
+            min-width: 0;
         }
         .article-body h2 {
             font-size: 1.5rem;
@@ -341,6 +401,19 @@
             margin-bottom: 0.6rem;
             font-size: 0.95rem;
         }
+        @media (max-width: 768px) {
+            .article-body h2 {
+                font-size: 1.3rem;
+                margin: 1.8rem 0 0.8rem;
+            }
+            .article-body h3 {
+                font-size: 1.1rem;
+            }
+            .article-body p {
+                font-size: 0.95rem;
+            }
+        }
+
         .highlight-box {
             background: var(--light-blue);
             border-left: 4px solid var(--accent-gold);
@@ -383,6 +456,8 @@
             background: #b8933e;
             transform: translateY(-3px);
         }
+
+        /* ── Related Cards ─────────────────── */
         .related-cards {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
@@ -427,6 +502,8 @@
             font-size: 0.8rem;
             font-weight: 600;
         }
+
+        /* ── Footer ────────────────────────── */
         .site-footer {
             background: var(--primary-navy);
             color: #d5d5d5;
@@ -438,6 +515,8 @@
             color: var(--accent-gold);
             text-decoration: none;
         }
+
+        /* ── Scroll Reveal ─────────────────── */
         .reveal {
             opacity: 0;
             transform: translateY(25px);
@@ -447,6 +526,8 @@
             opacity: 1;
             transform: translateY(0);
         }
+
+        /* ── Back to Top ───────────────────── */
         #back-to-top {
             position: fixed;
             bottom: 30px;
@@ -478,22 +559,31 @@
 </head>
 <body>
     <a href="#main-content" class="skip-link">Skip to content</a>
-    <header class="navbar" id="navbar">
+
+    <!-- ── Navbar ────────────────────────────────────────────── -->
+    <header class="navbar" id="navbar" role="banner">
         <div class="nav-container">
-            <a href="index.html" class="nav-brand"><span class="brand-icon">&#9878;</span><span>IBLC LLP<small>SECP Registered</small></span></a>
-            <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle menu"><i class="fa-solid fa-bars"></i></button>
-            <nav>
-                <ul class="nav-links" id="nav-links">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="index.html#departments">Departments</a></li>
-                    <li><a href="index.html#about">About</a></li>
-                    <li><a href="index.html#blogs" class="active">Blogs</a></li>
-                    <li><a href="contactus.html">Contact</a></li>
-                    <li><a href="contactus.html" class="nav-cta">Book Strategy Session</a></li>
+            <a href="index.html" class="nav-brand" aria-label="International Business Law Consultants LLP Home">
+                <img src="desktop.png" alt="International Business Law Consultants LLP" width="300" height="150">
+            </a>
+            <button class="mobile-toggle" id="mobile-toggle" aria-label="Open mobile menu" aria-expanded="false">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+            <nav aria-label="Main navigation">
+                <ul class="nav-links" id="nav-links" role="menubar">
+                    <li role="none"><a href="index.html" role="menuitem">Home</a></li>
+                    <li role="none"><a href="index.html#departments" role="menuitem">Departments</a></li>
+                    <li role="none"><a href="index.html#about" role="menuitem">About</a></li>
+                    <li role="none"><a href="index.html#team" role="menuitem">Team</a></li>
+                    <li role="none"><a href="index.html#blogs" role="menuitem" class="active">Blogs</a></li>
+                    <li role="none"><a href="contactus.html" role="menuitem">Contact</a></li>
+                    <li role="none"><a href="contactus.html" class="nav-cta magnetic-btn" role="menuitem">Book Strategy Session</a></li>
                 </ul>
             </nav>
         </div>
     </header>
+
+    <!-- ── Main Content ──────────────────────────────────────── -->
     <main id="main-content">
         <div class="blog-hero">
             <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1600&q=80"
@@ -507,7 +597,9 @@
                 <div class="blog-meta"><span><i class="fa-solid fa-user"></i> IBLC Advisory Team</span><span><i class="fa-solid fa-calendar"></i> June 2026</span><span><i class="fa-solid fa-clock"></i> 8 min read</span></div>
             </div>
         </div>
+
         <div class="article-container">
+            <!-- Table of Contents – flows naturally above article on mobile -->
             <aside class="toc" aria-label="Table of contents">
                 <h3>Contents</h3>
                 <ul>
@@ -520,6 +612,7 @@
                     <li><a href="#checklist">Final Checklist</a></li>
                 </ul>
             </aside>
+
             <article class="article-body">
                 <section id="intro" class="reveal">
                     <h2>Introduction</h2>
@@ -567,6 +660,8 @@
                 </div>
             </article>
         </div>
+
+        <!-- Related Articles -->
         <div style="max-width:900px;margin:0 auto;padding:0 2rem 3rem;">
             <h3 style="color:var(--primary-navy);margin-bottom:1rem;">Related Articles</h3>
             <div class="related-cards">
@@ -585,11 +680,17 @@
             </div>
         </div>
     </main>
+
+    <!-- ── Footer ────────────────────────────────────────────── -->
     <footer class="site-footer">
         <p>Copyright &copy; 2026 International Business Law Consultants LLP. All rights reserved.</p>
         <p style="font-size:0.72rem;color:#888;margin-top:0.3rem;">This article is for general corporate advisory purposes and does not replace jurisdiction specific legal advice.</p>
     </footer>
+
+    <!-- ── Back to Top ───────────────────────────────────────── -->
     <button id="back-to-top" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
+
+    <!-- ── Scripts ───────────────────────────────────────────── -->
     <script>
         (function() {
             const mobileToggle = document.getElementById('mobile-toggle');
@@ -597,19 +698,37 @@
             if (mobileToggle && navLinks) {
                 mobileToggle.addEventListener('click', function() {
                     const isOpen = navLinks.classList.toggle('open');
-                    mobileToggle.querySelector('i').className = isOpen ? 'fa-solid fa-xmark' :
-                        'fa-solid fa-bars';
+                    mobileToggle.setAttribute('aria-expanded', isOpen);
+                    const icon = mobileToggle.querySelector('i');
+                    if (icon) {
+                        icon.className = isOpen ? 'fa-solid fa-xmark' : 'fa-solid fa-bars';
+                    }
                 });
                 navLinks.querySelectorAll('a').forEach(function(l) {
-                    l.addEventListener('click', function() { navLinks.classList.remove(
-                            'open'); });
+                    l.addEventListener('click', function() {
+                        navLinks.classList.remove('open');
+                        mobileToggle.setAttribute('aria-expanded', 'false');
+                        const icon = mobileToggle.querySelector('i');
+                        if (icon) icon.className = 'fa-solid fa-bars';
+                    });
                 });
             }
+            const navbar = document.getElementById('navbar');
+            window.addEventListener('scroll', function() {
+                if (window.scrollY > 50) {
+                    navbar.classList.add('scrolled');
+                } else {
+                    navbar.classList.remove('scrolled');
+                }
+            });
             const reveals = document.querySelectorAll('.reveal');
             const obs = new IntersectionObserver(function(e) {
-                e.forEach(function(en) { if (en.isIntersecting) { en.target.classList.add(
-                        'revealed');
-                        obs.unobserve(en.target); } });
+                e.forEach(function(en) {
+                    if (en.isIntersecting) {
+                        en.target.classList.add('revealed');
+                        obs.unobserve(en.target);
+                    }
+                });
             }, { threshold: 0.15 });
             reveals.forEach(function(r) { obs.observe(r); });
             const btt = document.getElementById('back-to-top');
@@ -618,9 +737,10 @@
             });
             btt.addEventListener('click', function() { window.scrollTo({ top: 0, behavior: 'smooth' }); });
             document.querySelectorAll('img').forEach(function(i) {
-                i.addEventListener('error', function() { this.style.background =
-                        'linear-gradient(135deg,#d4cfc4,#e8e4d8)';
-                    this.style.minHeight = '160px'; });
+                i.addEventListener('error', function() {
+                    this.style.background = 'linear-gradient(135deg,#d4cfc4,#e8e4d8)';
+                    this.style.minHeight = '160px';
+                });
             });
         })();
     </script>

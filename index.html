@@ -160,35 +160,24 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
-            height: 72px;
+            min-height: 72px;          /* Changed from fixed height to min-height to fit larger logo */
         }
         .nav-brand {
             display: flex;
             align-items: center;
-            gap: 10px;
             text-decoration: none;
-            color: var(--primary-navy);
-            font-weight: 700;
-            font-size: 0.9rem;
-            letter-spacing: 0.5px;
-            line-height: 1.2;
-        }
-        .nav-brand span {
-            font-size: clamp(0.75rem, 2vw, 0.95rem);
-            white-space: normal;
-            max-width: 250px;
-        }
-        .nav-brand .brand-icon {
-            font-size: 1.8rem;
-            color: var(--accent-gold);
             flex-shrink: 0;
         }
-        .nav-brand small {
+        .nav-brand img {
             display: block;
-            font-size: 0.6rem;
-            color: var(--muted-text);
-            font-weight: 400;
-            letter-spacing: 0;
+            max-height: 125px;         /* Increased from 50px for better readability */
+            width: auto;
+            height: auto;
+        }
+        @media (max-width: 2500px) {
+            .nav-brand img {
+                max-height: 125px;      /* Increased from 40px for mobile readability */
+            }
         }
         .nav-links {
             display: flex;
@@ -262,7 +251,6 @@
             padding: 8px;
             color: var(--primary-navy);
             font-size: 1.5rem;
-            aria-label: 'Toggle mobile menu';
             margin-left: auto;
             z-index: 10;
         }
@@ -866,7 +854,6 @@
             letter-spacing: 2px;
             color: var(--accent-gold);
             font-weight: 700;
-            text-transform: uppercase;
         }
         .dept-content h3 {
             font-size: 1.6rem;
@@ -1247,8 +1234,8 @@
     <header class="navbar" id="navbar" role="banner">
         <div class="nav-container">
             <a href="index.html" class="nav-brand" aria-label="International Business Law Consultants LLP Home">
-                <span class="brand-icon">&#9878;</span>
-                <span>INTERNATIONAL BUSINESS LAW CONSULTANTS LLP<small>SECP Registered</small></span>
+                <!-- Updated: Always use desktop.png, no picture element -->
+                <img src="desktop.png" alt="International Business Law Consultants LLP" width="300" height="150">
             </a>
             <button class="mobile-toggle" id="mobile-toggle" aria-label="Open mobile menu" aria-expanded="false">
                 <i class="fa-solid fa-bars"></i>
@@ -1274,12 +1261,8 @@
             <div class="hero-global-dots" id="hero-dots" aria-hidden="true"></div>
             <div class="hero-container">
                 <div class="hero-content">
-                    <div class="trust-badges">
-                        <span class="trust-badge"><i class="fa-solid fa-certificate"></i> SECP Registered LLP</span>
-                        <span class="trust-badge"><i class="fa-solid fa-globe"></i> International Corporate Advisory</span>
-                        <span class="trust-badge"><i class="fa-solid fa-scale-balanced"></i> Cross Border Legal Strategy</span>
-                    </div>
-                    <h1 class="hero-headline">Your Legal Bridge to <span class="gold-accent">Global Business Expansion</span></h1>
+
+                    <h1 class="hero-headline">International Business Law  <span class="gold-accent">Consultants LLP</span></h1>
                     <p class="hero-sub">We help businesses setup, scale, and protect their operations worldwide. Our team consists of corporate law consultants holding advanced degrees in International Business Law, backed by a panel of expert advisors.</p>
                     <div class="hero-btns">
                         <a href="contactus.html" class="btn btn-primary magnetic-btn">Book a Corporate Strategy Session <i class="fa-solid fa-arrow-right"></i></a>
@@ -1484,7 +1467,7 @@
                     </div>
                     <div class="dept-content">
                         <div class="dept-icon"><i class="fa-solid fa-file-signature"></i></div>
-                        <div class="dept-label">DRAFTIT</div>
+                        <div class="dept-label">DRAFTiT</div>
                         <h3>Securing Your Trade and Assets with Enforceable Contracts</h3>
                         <ul class="dept-services">
                             <li><span class="svc-dot">&#9679;</span><div><strong>International Trade Contracts</strong>We write clear cross border agreements covering international sales, manufacturing supply chains, distribution networks, and agency partnerships.</div></li>
@@ -1633,12 +1616,14 @@
                         onerror="this.style.background='linear-gradient(135deg,#d4cfc4,#e8e4d8)'; this.style.minHeight='300px';">
                     </div>
                     <div class="dept-content">
-                        <div class="dept-icon"><i class="fa-solid fa-user-tie"></i></div>
                         <div class="dept-label">Founder & Managing Partner</div>
                         <h3>Shah Zaman S. Shami</h3>
-                        <p style="color:var(--charcoal);line-height:1.7;font-size:0.95rem;">Shah Zaman S. Shami is a distinguished legal professional who brings a rare combination of elite academic distinction and high-stakes corporate experience to International Business Law Consultants LLP. A Lahore Board Topper and recipient of Academic Distinction from Government College University (GCU), Lahore, he earned his LLB from Punjab University Law College before securing a Post Graduate Diploma in Environmental Law. He advanced his global legal expertise with an LLM in International Business Law from the University of Bedfordshire, where his core research specialized in the modern domain of International Digital Trade Law.</p>
-                        <p style="color:var(--charcoal);line-height:1.7;font-size:0.95rem;">As the founder and leader of the firm, Shah Zaman advises multinational corporations, local enterprises, and high-profile entities across complex cross-border and domestic legal frameworks. His sophisticated corporate practice spans International Corporate Governance, International Commercial Litigation, International Commercial Arbitration, International Intellectual Property Law, and International Trade & Digital Trade Law.</p>
-                        <p style="color:var(--charcoal);line-height:1.7;font-size:0.95rem;">Beyond his foundational corporate work, Shah Zaman has a robust history of public interest litigation and institutional service. He has contributed significantly to environmental jurisprudence and notably litigated the high-profile Punjab University tree-cutting case. He also served as Secretary General of the International Law Foundation, spearheading major legal research and reform initiatives. Currently, Shah Zaman serves as Legal Advisor to Kohala SMC Pvt. Ltd, Horeca Systems, and Kohala Systems, overseeing complex international organizational matters and ensuring strict statutory compliance with Labour Department, EOBI, PESSI, LDA, and related regulatory authorities. He has successfully represented major market leaders such as Jazz, ICON Builders, and other renowned companies. Committed to legal education, he is a Visiting Faculty member at the International School of Law and Business.</p>
+                        <p style="color:var(--charcoal);line-height:1.5;font-size:0.95rem;text-align:justify;">Shah Zaman S. Shami is a distinguished legal professional with elite academic credentials and extensive corporate legal experience. A Lahore Board Topper and recipient of Academic Distinction from Government College University (GCU), Lahore, he earned his LLB from Punjab University Law College and later completed a Post Graduate Diploma in Environmental Law. He further advanced his international legal expertise through an LLM in International Business Law from the University of Bedfordshire, with specialized research in International Digital Trade Law.</p>
+
+                        <p style="color:var(--charcoal);line-height:1.5;font-size:0.95rem;text-align:justify;">As founder and leader of International Business Law Consultants LLP, Shah Zaman advises multinational corporations, local enterprises, and high-profile entities on complex domestic and cross-border legal matters. His corporate practice covers International Corporate Governance, International Commercial Litigation, International Commercial Arbitration, International Intellectual Property Law, and International Trade and Digital Trade Law.</p>
+
+                        <p style="color:var(--charcoal);line-height:1.5;font-size:0.95rem;text-align:justify;">Alongside his corporate practice, Shah Zaman has a strong record in public interest litigation and institutional service, including significant contributions to environmental jurisprudence and litigation in the Punjab University tree-cutting case. He also served as Secretary General of the International Law Foundation, leading legal research and reform initiatives. He currently serves as Legal Advisor to Kohala SMC Pvt. Ltd, Horeca Systems, and Kohala Systems, handling international organizational matters and ensuring compliance with Labour Department, EOBI, PESSI, LDA, and other regulatory authorities. He has represented leading companies including Jazz and ICON Builders, and also serves as Visiting Faculty at the International School of Law and Business.</p>
+  
                     </div>
                 </div>
 
